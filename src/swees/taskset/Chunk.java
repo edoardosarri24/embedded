@@ -6,10 +6,10 @@ import swees.utils.LoggingConfig;
 
 public class Chunk {
 
-    private int executionTime;
+    private double executionTime;
     private static final Logger log = LoggingConfig.getLogger();
 
-    public Chunk(int executionTime) {
+    public Chunk(double executionTime) {
         this.executionTime = executionTime;
     }
 

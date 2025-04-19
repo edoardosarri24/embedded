@@ -3,13 +3,13 @@ skinparam classAttributeIconSize 0
 
 ' classi
 class Chunk {
-    - executionTime: int
+    - executionTime: double
 }
 
 class Task {
-    - period: int
+    - period: double
     - chunks: List<Chunk>
-    - deadline: int
+    - deadline: double
 }
 
 class Taskset {
