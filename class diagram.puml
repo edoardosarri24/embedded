@@ -16,7 +16,7 @@ class Chunk {
 }
 
 class Taskset {
-    - tasks: List<Task>
+    - tasks: Set<Task>
 }
 
 class Resource {
@@ -29,7 +29,6 @@ abstract class Scheduler {
 }
 
 class RMScheduler <<final>> {
-    + orderTasks(taskset): List<Task>
 }
 
 class EDFScheduler <<final>> {
