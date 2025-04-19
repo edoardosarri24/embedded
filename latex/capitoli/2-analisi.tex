@@ -7,10 +7,14 @@ In questo capitolo analiziamo la struttura del progetto, partendo dai suoi compo
 \subsection{Task}
 Un task è definito da:
 \begin{itemize}
-    \item Pattern di rilascio, cioè una distribuzione del tempo tra due arrivi consecutivi. Ci semplifica la vita rappresnetare la distribuzione con il suo Samplar (vedi Sirio); aggiungiamo a questi il DeterministicSampler parametrizzato dal tempo di rilascio.
+    \item Pattern di rilascio, cioè una distribuzione del tempo tra due arrivi consecutivi; rappresenta il periodo del task. Ci semplifica la vita rappresnetare la distribuzione con il suo Samplar (vedi Sirio); aggiungiamo a questi il DeterministicSampler parametrizzato dal tempo di rilascio.
     \item Numero e tipo di chunk.
-    \item Deadline.
+    \item Deadline. Forse conviene considerare la deadline relativa; a lezione abbiamo visto questa soluzione per implementare i vari resource access protocol.
+    \item Priorità nominale.
+    \item Priorità dinamica.
 \end{itemize}
+
+Non ci interessa definire un activation time perché vogliamo considerare il caso pessimo: l'activation time sarà l'istante inziale per tutti i task.
 
 \myskip
 
@@ -20,7 +24,7 @@ Un chunk, cioè una computazione atomica del task, è definito da: una distribuz
 È un insieme di task. È l'oggetto principale gestito dallo scheduler.
 
 \subsection{Risorse}
-Sono le risorse da utilizzare in mutua esclusione. Ongi risorsa sarà gestita da un semaforo binario.
+Sono le risorse da utilizzare in mutua esclusione. Ongi risorsa è gestita da un semaforo binario.
 
 \subsection{CPU}
 È l'unità di elaborazione. Supponiamo essere unica.
